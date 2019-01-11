@@ -1,15 +1,33 @@
 new Vue({
   el: "#app",
   data: {
-    greeting: "",
+    greeting: "Hello World!",
+    alertMessage: "",
     user: "Permadi Wibisono",
-    city: "Indonesia"
+    city: "Toronto",
+    cityImgUrl: 'https://bit.ly/2SKJPqJ'
   },
   methods: {
-    addGreeting() {
-      this.greeting = 'Hello World!';
+    changeCity() {
+      if(this.city === 'Toronto'){
+        this.city = "Lagos"
+        this.cityImgUrl = "https://bit.ly/2Rd4gQ3";
+      }
+      else{
+        this.city = "Toronto"
+        this.cityImgUrl = "https://bit.ly/2SKJPqJ";
+      }
     },
-    changeGreeting() {
+    alertMessageKeyUp(ev) {
+      console.log("Event ", ev);
+      this.alertMessage = "You typed something!";
+    },
+    alertMessageKeyUpEnter(ev) {
+      console.log("Event ", ev.target.value);
+      this.alertMessage = ev.target.value;
+    },
+    changeGreeting(ev) {
+      console.log("Event ", ev);
       this.greeting = this.greeting === 'Hello World!' ?
       'What is up!' :
       'Hello World!';

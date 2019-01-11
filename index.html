@@ -9,9 +9,25 @@
   <body>
     <div id="app">
       <h2>{{ greeting }}</h2>
-      <p>by {{ user }} who lives in {{ city }}</p>
-      <button v-on:click="addGreeting">Add Greeting</button>
-      <button v-on:click="changeGreeting">Change Greeting</button>
+      <p v-show="city === 'Toronto'">
+        by {{ user }} who lives in {{ city }}
+      </p>
+      <p v-show="city === 'Lagos'">
+        by {{ user }} who wishes to visit {{ city }}
+      </p>
+      <p>{{ alertMessage }}</p>
+      <img :src="cityImgUrl"/>
+      <br/>
+      <button @click="changeCity">Change City</button>
+      <br/>
+      <button @click="changeGreeting($event)">Change Greeting</button>
+      <br/>
+      <button @dblclick="changeGreeting($event)">Double Click to Change Greeting</button>
+      <br/>
+      <input type="text" placeholder="Type something" @keyup="alertMessageKeyUp($event)"/>
+      <br/>
+      <input type="text" placeholder="Type something" @keyup.enter="alertMessageKeyUpEnter($event)"/>
+      <br/>
     </div>
     <script src="https://unpkg.com/vue"></script>
     <script src="index.js"></script>
