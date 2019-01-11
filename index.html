@@ -18,15 +18,15 @@
       <p>{{ alertMessage }}</p>
       <img :src="cityImgUrl"/>
       <br/>
-      <button v-on:click="changeCity">Change City</button>
+      <button @click="changeCity">Change City</button>
       <br/>
-      <button v-on:click="changeGreeting($event)">Change Greeting</button>
+      <button @click="changeGreeting($event)">Change Greeting</button>
       <br/>
-      <button v-on:dblclick="changeGreeting($event)">Double Click to Change Greeting</button>
+      <button @dblclick="changeGreeting($event)">Double Click to Change Greeting</button>
       <br/>
-      <input type="text" placeholder="Type something" v-on:keyup="alertMessageKeyUp($event)"/>
+      <input type="text" placeholder="Type something" @keyup="alertMessageKeyUp($event)"/>
       <br/>
-      <input type="text" placeholder="Type something" v-on:keyup.enter="alertMessageKeyUpEnter($event)"/>
+      <input type="text" placeholder="Type something" @keyup.enter="alertMessageKeyUpEnter($event)"/>
       <br/>
     </div>
     <script src="https://unpkg.com/vue"></script>
