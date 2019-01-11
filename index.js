@@ -4,10 +4,20 @@ new Vue({
     greeting: "Hello World!",
     alertMessage: "",
     user: "Permadi Wibisono",
-    city: "Indonesia",
+    city: "Toronto",
     cityImgUrl: 'https://bit.ly/2SKJPqJ'
   },
   methods: {
+    changeCity() {
+      if(this.city === 'Toronto'){
+        this.city = "Lagos"
+        this.cityImgUrl = "https://bit.ly/2Rd4gQ3";
+      }
+      else{
+        this.city = "Toronto"
+        this.cityImgUrl = "https://bit.ly/2SKJPqJ";
+      }
+    },
     alertMessageKeyUp(ev) {
       console.log("Event ", ev);
       this.alertMessage = "You typed something!";
