@@ -4,7 +4,8 @@ new Vue({
     greeting: "Hello World!",
     alertMessage: "",
     user: "Permadi Wibisono",
-    city: "Indonesia"
+    city: "Indonesia",
+    cityImgUrl: 'https://bit.ly/2SKJPqJ'
   },
   methods: {
     alertMessageKeyUp(ev) {

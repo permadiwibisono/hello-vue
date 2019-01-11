@@ -11,6 +11,8 @@
       <h2>{{ greeting }}</h2>
       <p>by {{ user }} who lives in {{ city }}</p>
       <p>{{ alertMessage }}</p>
+      <img v-bind:src="cityImgUrl"/>
+      <br/>
       <button v-on:click="changeGreeting($event)">Change Greeting</button>
       <br/>
       <button v-on:dblclick="changeGreeting($event)">Double Click to Change Greeting</button>
