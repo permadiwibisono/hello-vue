@@ -16,7 +16,7 @@
         by {{ user }} who wishes to visit {{ city }}
       </p>
       <p>{{ alertMessage }}</p>
-      <img v-bind:src="cityImgUrl"/>
+      <img :src="cityImgUrl"/>
       <br/>
       <button v-on:click="changeCity">Change City</button>
       <br/>
