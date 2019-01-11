@@ -11,13 +11,13 @@
       <h2>{{ greeting }}</h2>
       <p>by {{ user }} who lives in {{ city }}</p>
       <p>{{ alertMessage }}</p>
-      <button v-on:click="changeGreeting">Change Greeting</button>
+      <button v-on:click="changeGreeting($event)">Change Greeting</button>
       <br/>
-      <button v-on:dblclick="changeGreeting">Double Click to Change Greeting</button>
+      <button v-on:dblclick="changeGreeting($event)">Double Click to Change Greeting</button>
       <br/>
-      <input type="text" placeholder="Type something" v-on:keyup="alertMessageKeyUp"/>
+      <input type="text" placeholder="Type something" v-on:keyup="alertMessageKeyUp($event)"/>
       <br/>
-      <input type="text" placeholder="Type something" v-on:keyup.enter="alertMessageKeyUpEnter"/>
+      <input type="text" placeholder="Type something" v-on:keyup.enter="alertMessageKeyUpEnter($event)"/>
       <br/>
     </div>
     <script src="https://unpkg.com/vue"></script>

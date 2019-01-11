@@ -7,13 +7,16 @@ new Vue({
     city: "Indonesia"
   },
   methods: {
-    alertMessageKeyUp() {
+    alertMessageKeyUp(ev) {
+      console.log("Event ", ev);
       this.alertMessage = "You typed something!";
     },
-    alertMessageKeyUpEnter() {
-      this.alertMessage = "You typed and pressed Enter!";
+    alertMessageKeyUpEnter(ev) {
+      console.log("Event ", ev.target.value);
+      this.alertMessage = ev.target.value;
     },
-    changeGreeting() {
+    changeGreeting(ev) {
+      console.log("Event ", ev);
       this.greeting = this.greeting === 'Hello World!' ?
       'What is up!' :
       'Hello World!';
