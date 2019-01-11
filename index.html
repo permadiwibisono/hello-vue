@@ -9,10 +9,10 @@
   <body>
     <div id="app">
       <h2>{{ greeting }}</h2>
-      <p v-if="city === 'Toronto'">
+      <p v-show="city === 'Toronto'">
         by {{ user }} who lives in {{ city }}
       </p>
-      <p v-if="city === 'Lagos'">
+      <p v-show="city === 'Lagos'">
         by {{ user }} who wishes to visit {{ city }}
       </p>
       <p>{{ alertMessage }}</p>
