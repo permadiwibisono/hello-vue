@@ -5,7 +5,8 @@ new Vue({
     alertMessage: "",
     user: "Permadi Wibisono",
     city: "Toronto",
-    cityImgUrl: 'https://bit.ly/2SKJPqJ'
+    cityImgUrl: 'https://bit.ly/2SKJPqJ',
+    numbers: [1, 2, 3, 4, 5, 6, 7, 9, 10 ]
   },
   methods: {
     changeCity() {

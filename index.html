@@ -28,6 +28,10 @@
       <br/>
       <input type="text" placeholder="Type something" @keyup.enter="alertMessageKeyUpEnter($event)"/>
       <br/>
+      <br/>
+      <ul>
+        <li v-for="number in numbers">{{ number }}</li>
+      </ul>
     </div>
     <script src="https://unpkg.com/vue"></script>
     <script src="index.js"></script>
