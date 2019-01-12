@@ -9,6 +9,9 @@ new Vue({
     numbers: [1, 2, 3, 4, 5, 6, 7, 9, 10 ]
   },
   methods: {
+    shuffleList() {
+      this.numbers = _.shuffle(this.numbers);
+    },
     changeCity() {
       if(this.city === 'Toronto'){
         this.city = "Lagos"
