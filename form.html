@@ -21,10 +21,9 @@
         <div class="select">
           <select v-model="subject">
             <option value="" disabled>Please Select Subject</option>
-            <option value="Engineering">Engineering</option>
-            <option value="Computer Science">Computer Science</option>
-            <option value="Biology">Biology</option>
-            <option value="Other">Other...</option>
+            <option v-for="subjectOpt in subjectList" :value="subjectOpt.value" :key="subjectOpt.value">
+              {{subjectOpt.label}}
+            </option>
           </select>
         </div>
       </div>
@@ -32,13 +31,9 @@
         Your subject : {{subject}}
       </div>
       <div class="field">
-        <label class="radio">
-          <input type="radio" value="Female" v-model="gender"/>
-          Female
-        </label>
-        <label class="radio">
-          <input type="radio" value="Male" v-model="gender"/>
-          Male
+        <label class="radio" v-for="genderOpt in genderList" :key="genderOpt">
+          <input type="radio" :value="genderOpt" v-model="gender"/>
+          {{genderOpt}}
         </label>
       </div>
       <div class="field">
