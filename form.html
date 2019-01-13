@@ -5,9 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>My Form</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/bulma/css/bulma.css" />
   </head>
   <body>
-    <div id="app">
+    <div id="app" style="padding: 12px">
+      <div class="field">
+        <label class="label">Name</label>
+        <input type="text" class="input" v-model="name"/>
+      </div>
+      <div class="field">
+        Your name : {{name}}
+      </div>
+      <div class="field">
+        <label class="label">Subject</label>
+        <div class="select">
+          <select v-model="subject">
+            <option value="" disabled>Please Select Subject</option>
+            <option value="Engineering">Engineering</option>
+            <option value="Computer Science">Computer Science</option>
+            <option value="Biology">Biology</option>
+            <option value="Other">Other...</option>
+          </select>
+        </div>
+      </div>
+      <div class="field">
+        Your subject : {{subject}}
+      </div>
+      <div class="field">
+        <label class="radio">
+          <input type="radio" value="Female" v-model="gender"/>
+          Female
+        </label>
+        <label class="radio">
+          <input type="radio" value="Male" v-model="gender"/>
+          Male
+        </label>
+      </div>
+      <div class="field">
+        Your gender : {{gender}}
+      </div>
+      <div class="field">
+        <label class="checkbox">
+          <input type="checkbox" v-model="termAndConditions"/>
+          I agree to the terms and conditions.
+        </label>
+      </div>
+      <div class="field">
+        Term and Conditions : {{termAndConditions}}
+      </div>
+      <div class="field">
+        <button class="button is-info" @click="onSubmit">
+          Submit
+        </button>
+      </div>
     </div>
     <script src="https://unpkg.com/vue"></script>
     <script src="form.js"></script>
