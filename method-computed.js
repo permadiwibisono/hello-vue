@@ -5,7 +5,14 @@ new Vue({
   },
   methods: {
     reverseString(str){
+      console.log("This is reverseMessage");
       return str.split('').reverse().join('');
+    }
+  },
+  computed: {
+    reverseMessage(){
+      console.log("This is reverseMessage");
+      return this.message.split('').reverse().join('');
     }
   }
 })
