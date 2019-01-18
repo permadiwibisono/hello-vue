@@ -5,7 +5,7 @@ new Vue({
   },
   methods: {
     reverseString(str){
-      console.log("This is reverseMessage");
+      console.log("This is reverseString");
       return str.split('').reverse().join('');
     }
   },
