@@ -1,4 +1,4 @@
 # hello-vue
-30days of vuejs \m/ (06/30).
+30days of vuejs \m/ (07/30).
 
 Per branch per days.
