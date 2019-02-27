@@ -34,5 +34,10 @@ new Vue({
     // instance has been updated
     //In the updated() hook, the accessible DOM refers to the resolved DOM after the update has been made.
     console.log("updated() ", this.$el) // DOM after update is complete
+  },
+  destroyed(){
+    // instance had been destroyed
+    console.log("destoryed() ", this.$el) // DOM after destroy is complete
+
   }
 })
