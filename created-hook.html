@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://unpkg.com/bulma/css/bulma.css" />
+    <title>Created Hook Example.</title>
+  </head>
+  <body>
+    <div id="app" class="container" style="padding: 1rem">
+      <div class="columns">
+        <div class="column is-4">
+            <div class="card">
+              <header class="card-header-title">
+                {{isLoading? 'Loading...' : name}}
+              </header>
+              <div class="card-content">
+                <div class="content">
+                  <p>{{isLoading? 'Loading...' : company.name}}</p>
+                  <p>{{isLoading? 'Loading...' : company.catchPhrase}}</p>
+                </div>
+              </div>
+              <footer class="card-footer">
+                <a href="#" class="card-footer-item">{{isLoading? 'Loading...' : email}}</a>
+              </footer>
+            </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./created-hook.js"></script>
+  </body>
+</html>
