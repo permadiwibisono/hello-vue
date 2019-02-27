@@ -23,5 +23,11 @@ new Vue({
       this.company.catchPhrase =
       randomUser.company.catchPhrase;
     })
+  },
+  mounted(){
+    // instance has been mounted
+    //In the mounted() hook of an instance, we’re able to access the rendered DOM with this.$el
+    //The mounted() hook is often best used when DOM dependant changes need to be made (i.e. when you need access to the DOM to make certain changes).
+    console.log(this.$el);
   }
 })
