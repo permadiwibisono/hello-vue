@@ -28,6 +28,11 @@ new Vue({
     // instance has been mounted
     //In the mounted() hook of an instance, we’re able to access the rendered DOM with this.$el
     //The mounted() hook is often best used when DOM dependant changes need to be made (i.e. when you need access to the DOM to make certain changes).
-    console.log(this.$el);
+    console.log("mounted() ", this.$el);
+  },
+  updated(){
+    // instance has been updated
+    //In the updated() hook, the accessible DOM refers to the resolved DOM after the update has been made.
+    console.log("updated() ", this.$el) // DOM after update is complete
   }
 })
